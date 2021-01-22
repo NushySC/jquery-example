@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Lato&display=swap');
+/* .left {
+	float: left;
+}
+
+.right {
+	float: right;
+	background-color: #006eff;
+} */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #333;
+	font-family: 'Lato', 'san-serif';
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+}
+
+h2 {
+	font-family: 'Bowlby One SC', cursive;
+}
+
+h3 {
+	font-family: 'Bowlby One SC', cursive;
+}
+
+h4 {
+	font-family: 'Bowlby One SC', cursive;
+}
+
+h5 {
+	font-family: 'Bowlby One SC', cursive;
+}
+
+h6 {
+	font-family: 'Bowlby One SC', cursive;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	padding: 1rem;
+}
+
+thead tr {
+	background-color: #333;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+tbody tr {
+	border-bottom: 2px solid rgb(78, 78, 78);
+	text-align: center;
+}
+tbody tr:nth-child(even) {
+	background-color: #00ccff5e;
+}
+tbody tr:nth-child(odd) {
+	background-color: rgba(0, 132, 255, 0.425);
+}
+
+tbody td {
+	font-size: 0.8rem;
+	padding: 0.5rem;
+}
+
+.two tbody tr:nth-child(even) {
+	background-color: #15ff005e;
+}
+.two tbody tr:nth-child(odd) {
+	background-color: rgba(200, 255, 0, 0.425);
+}
+
+ul.iconized {
+	list-style-type: none;
+	margin: 1rem;
+}
+ul.iconized li {
+	padding: 1rem;
+}
+
+.iconized i {
+	margin-right: 1rem;
+	color: #006eff;
+}
+
+/*Usando anidamiento crear la hoja de estilos para un menú */
+nav {
+	background-image: linear-gradient(to bottom, #db18cb 0%, #ff0095bb 100%);
+	padding: 0.2rem;
+	color: white;
+}
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+nav ul li {
+	padding: 0.2rem;
+	margin-right: 2rem;
+	list-style: none;
+
+	/* position: relative; */
+	/* color: #fff; */
+}
+nav ul li ul {
+	display: none;
+	color: grey;
+}
+nav ul li:hover > ul {
+	display: block;
+	position: absolute;
+	/* left: 25%; */
+	top: 2.7rem;
+	padding-left: 0px;
+	background-color: white;
+	border-radius: 5px;
+	color: grey;
+	box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.301);
+}
+nav ul li:hover > ul li {
+	width: 100%;
+	padding: 0.75rem;
+}
+nav ul li:hover > ul li:hover {
+	background-color: #ff0095bb;
+	color: white;
+}
+nav ul li.active,
+nav ul li:hover {
+	font-weight: bolder;
+}
+nav ul li a {
+	text-decoration: none;
+}
+
+.container {
+	width: 100vw;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	width: 85vw;
+	padding: 2rem;
+	border-left: thin solid lightblue;
+}
+.sidebar {
+	width: 15vw;
+}
+
+.pictures {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+img {
+	width: 20%;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+}
+
+.table {
+	width: 60%;
+	margin: 1rem auto;
+}
+.logos {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+figure.card {
+	border: 1px solid #333;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	margin: 1rem;
+	height: 10rem;
+	display: flex;
+	flex-direction: column;
+}
+figure.card img {
+	width: 30%;
+}
+
+figure.card figcaption {
+	font-size: 0.8rem;
+	margin: 0.5rem;
+	text-align: center;
+}
+
+form {
+	width: 100%;
+	padding: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+	display: block;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+	font-size: 1.2rem;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0.2rem !important;
+	padding: 0.5rem;
+}
+.btn:hover {
+	box-shadow: 0.1rem 0.1rem #888 !important;
+}
+.btn:active {
+	color: white !important;
+}
+
+.btn-error {
+	background-color: #ff0000;
+	color: white;
+	font-weight: bolder;
+}
+
+.btn-warning {
+	background-color: #eff178;
+	color: white;
+	font-weight: bolder;
+}
+
+.btn-accepted {
+	background-color: #378a00;
+	color: white;
+	font-weight: bolder;
+}
+
+.btn-normal {
+	background-color: #006eff;
+	color: white;
+	font-weight: bolder;
+}
+
+.celda_destacada {
+	border: 3px dashed tomato;
+	font-weight: bold;
+}
+
+.nueva_clase {
+	font-size: 2rem;
+}
+@media screen and (max-width: 425px) {
+	nav ul {
+		margin-block-start: 0;
+		padding-inline-start: 0;
+		font-size: 0.8rem;
+	}
+	.container {
+		flex-direction: column;
+	}
+	.sidebar,
+	.main,
+	.iconized {
+		width: 100vw;
+	}
+	.pictures {
+		flex-direction: column;
+	}
+	img {
+		width: 80vw;
+	}
+}
