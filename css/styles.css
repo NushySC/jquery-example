@@ -89,6 +89,9 @@ ul.iconized li {
 	margin-right: 1rem;
 	color: #006eff;
 }
+.fa-times {
+	margin-left: 1rem;
+}
 
 /*Usando anidamiento crear la hoja de estilos para un menú */
 nav {

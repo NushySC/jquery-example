@@ -38,7 +38,17 @@ $(function () {
 			.eq(4)
 			.text(total);
 
-		total >= 5 ? $(this).css('color', 'grey') : $(this).css('color', 'red');
+		total > 5
+			? $(this).css('color', 'black')
+			: $(this).css({backgroundColor: '#ff000d46', color: 'red'});
+
+		total < 5
+			? $('tbody tr:nth-child(' + (index + 1) + ') td')
+					.eq(4)
+					.append('<i class="fas fa-times"></i>')
+			: $('tbody tr:nth-child(' + (index + 1) + ') td')
+					.eq(4)
+					.append('');
 	});
 });
 
