@@ -8,7 +8,7 @@ $(function () {
 	$('table:nth-of-type(1)').addClass('two');
 });
 
-// Add total
+//Add total
 $(function () {
 	let total = 0;
 	let numElementos = 3;
@@ -58,32 +58,109 @@ $(function () {
 		borderRadius: 10,
 	});
 });
-// $(function () {
+$(function () {
+	$('img:nth-of-type(2)').attr('src', 'https://picsum.photos/200');
+	$('.card').css({
+		'background-color': 'azure',
+		'border-color': 'cornflowerBlue',
+	});
 
-// 	$('img').attr('src', './img/jquery.png');
-// 	$('.card').css('background-color', 'pink');
+	for (i = 0; i < 3; i++) {
+		$('table:nth-of-type(1) tbody').append(
+			'<tr><td>' +
+				i +
+				'</td><td>' +
+				i +
+				'</td><td>' +
+				i +
+				'</td><td>' +
+				i +
+				'</td><td>'
+		);
+	}
 
-// 	for (i = 0; i < 10; i++) {
-// 		$('table tbody').append(
-// 			'<tr><td>' + i + '</td><td>' + i + '</td><td>' + i + '</td></tr>'
-// 		);
-// 	}
+	$('input').eq(0).val('Anuska');
+	$(':password').attr('type', 'text').val('********');
 
-// 	//$(":password").attr("type","date");
-// 	$('input').eq(0).val('Pepe');
-// 	$(':password').attr('type', 'text').val('MANUEL');
+	$('.iconized li').html(function (index, wow) {
+		return wow + '--->' + index;
+	});
+});
+//Calculadora
 
-// 	$(':header').css({
-// 		color: 'red',
-// 		'background-color': 'blue',
-// 		margin: '0px',
-// 	});
+$('#calculadora button').on('click', function () {
+	let op = $(this).val();
+	let op1 = parseFloat($('#op1').val());
+	let op2 = parseFloat($('#op2').val());
+	let resultado;
 
-// 	$('.iconized li').html(function (index, texto) {
-// 		return texto + '--->' + index;
-// 	});
+	switch (op) {
+		case '+':
+			resultado = op1 + op2;
+			break;
+		case '-':
+			resultado = op1 - op2;
+			break;
+		case '*':
+			resultado = op1 * op2;
+			break;
+		case '/':
+			resultado = op1 / op2;
+			break;
+	}
 
-// 	$('td').wrapInner('<div></div>');
+	$('#calculadora h4 span').text(resultado);
+});
 
-// 	$('td > div').addClass('nueva_clase');
-// });
+/* Funcionamiento del cuadrado */
+$('body').on('keydown', function (e) {
+	let keycode = e.which;
+
+	switch (keycode) {
+		case 37:
+			$('#hijo').css('left', '-=10');
+			break;
+		case 38:
+			$('#hijo').css('top', '-=10');
+			break;
+		case 39:
+			$('#hijo').css('left', '+=10');
+			break;
+		case 40:
+			$('#hijo').css('top', '+=10');
+			break;
+	}
+});
+
+/* Funcionamiento de la tabla */
+$('tr').on('mouseenter', function () {
+	let inputName = 'input#nombre';
+	let value = $(inputName).val();
+
+	$(this).is(':contains(' + value + ')')
+		? $(this).addClass('contains')
+		: $(this).addClass('no-contains');
+});
+
+$('tr').on('mouseleave', function () {
+	$(this).prop('class', '');
+});
+
+/* Funcionamiento del menú contextual */
+$('section#contextMenu').hide();
+
+$('section#table').on('contextMenu', function (event) {
+	event.preventDefault();
+	if (event.which == 3) {
+		console.log('SIIII');
+		$('section#contextMenu').css({
+			left: event.pageX,
+			top: event.pageY,
+		});
+		$('section#contextMenu').toggle();
+	}
+});
+
+$('section#contextMenu').on('mouseleave', function () {
+	$(this).toggle();
+});

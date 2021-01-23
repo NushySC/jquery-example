@@ -71,6 +71,14 @@
 				<main class="main">
 					<section>
 						<table class="table">
+							<p>
+								<label for="nombre">Nombre</label>
+								<input
+									id="nombre"
+									type="text"
+									placeholder="nombre_a_buscar"
+								/>
+							</p>
 							<thead>
 								<tr>
 									<th>Alumno</th>
@@ -178,6 +186,49 @@
 						<h1>HOLA</h1>
 						<h2>ADIOS</h2>
 						<h3>HASTA LUEGO</h3>
+					</section>
+					<section id="calculadora">
+						<div class="operadores">
+							<div>
+								<label for="op1">Operador 1</label>
+								<input
+									id="op1"
+									type="number"
+									placeholder="operador1"
+								/>
+							</div>
+							<div>
+								<label for="op2">Operador 2</label>
+								<input
+									id="op2"
+									type="number"
+									placeholder="operador2"
+								/>
+							</div>
+						</div>
+						<div class="calc__buttons">
+							<button value="+">+</button>
+							<button value="-">-</button>
+							<button value="*">*</button>
+							<button value="/">/</button>
+						</div>
+						<div>
+							<h4>
+								El resultado de la operación es: <span></span>
+							</h4>
+						</div>
+					</section>
+
+					<!-- Cuadrado que se mueve-->
+					<section id="square">
+						<div id="hijo"></div>
+					</section>
+
+					<section id="contextMenu">
+						<div>Opción1</div>
+						<div>Opción2</div>
+						<div>Opción3</div>
+						<div>Opción4</div>
 					</section>
 				</main>
 			</div>

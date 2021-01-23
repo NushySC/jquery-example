@@ -292,3 +292,77 @@ fieldset {
 		width: 80vw;
 	}
 }
+
+/* Estilos para la tabla */
+
+.contains {
+	background-color: blue !important;
+	color: white !important;
+}
+
+.no-contains {
+	background-color: #a8a7a7 !important;
+}
+
+/* Estilos para el cuadrado */
+#square {
+	border: 1px solid black;
+	height: 300px;
+	margin: 20px auto;
+	position: relative;
+	width: 60%;
+}
+
+#square #hijo {
+	background-color: red;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+}
+
+/* Opciones del menú contentual */
+section#contextMenu {
+	background-color: khaki;
+	border: 1px solid red;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	position: fixed;
+	width: 10rem;
+}
+
+section#contextMenu div {
+	padding: 0.5rem;
+}
+
+#calculadora {
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0;
+}
+.calc__buttons,
+.operadores {
+	display: flex;
+	flex-direction: row;
+}
+
+#op1,
+#op2 {
+	width: 6rem;
+	margin-right: 1rem;
+}
+
+h4 span {
+	color: teal;
+}
+label {
+	font-size: 0.9rem;
+}
+button {
+	width: 3rem;
+	height: 3rem;
+	background-color: indianred;
+	margin-right: 0.5rem;
+	color: white;
+}
